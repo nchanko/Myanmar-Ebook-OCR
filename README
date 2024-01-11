@@ -1,0 +1,2 @@
+You need to have mya.traineddata to use Myanmar language OCR. Also to detect other langauges including English, you need specific data file.
+I recommend to install from tesseract website. 
