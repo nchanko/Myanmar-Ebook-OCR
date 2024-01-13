@@ -12,7 +12,7 @@ This repository contains a script utilizing Tesseract OCR to digitize PDF ebooks
 - Currently supports OCR for English and Myanmar-based text.
 - Files must be placed in the respective folder (Input PDF and input images for OCR).
 - The original script, found on the internet and created by an unknown user, works only for Windows.
-- Nyein Chan Ko Ko added the script for MAC compatibility.
+- I modified the script for MAC compatibility and other additional functions like epu converter, zawgyi unicode converter.
 
 ## Installation for MAC
 
