@@ -81,3 +81,7 @@ Once the setup is complete:
    - For PDFs: `./pdf_to_text.bat`
    - For images: `./images_to_text.bat`
 
+
+
+ADDITIONAL TIP: If your book contains both English and Burmese and you wanna recognize English words, you need to adjust the script file alittle bit. 1. You need to have english languge file in your tessdata. 2. You need to find the word called mya in the script and change to mya+eng. For additional language, you can add with + and language code.
+
