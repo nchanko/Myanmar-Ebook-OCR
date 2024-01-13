@@ -57,5 +57,27 @@ In the terminal, set the directory and run:
 ```
 
 
+## For Windows
 
+### Installation
+
+Install Tesseract and `pdftopng.exe`.
+
+- `pdftopng` is already included in the Tesseract-OCR folder. You can find it here: [Tesseract-OCR/pdf_tools](https://github.com/NChanko/Myanmar-Ebook-OCR/tree/main/Tesseract-OCR/pdf_tools).
+- Place the `pdf_tools` folder in your Tesseract-OCR directory on your computer.
+
+#### Language File
+
+- Obtain the language file from `tessdata`. The Myanmar language file should be `mya.traineddata`.
+- Add this language file to the Tesseract-OCR directory on your computer, typically under `C:/Program Files`.
+- If you have previously downloaded language files, you might see additional languages. Replace them with this new language file for higher accuracy and more font support.
+
+### Running the Script
+
+Once the setup is complete:
+
+1. Open the terminal or command line in your work directory (Myanmar-Ebook-OCR).
+2. Run the following commands as needed:
+   - For PDFs: `./pdf_to_text.bat`
+   - For images: `./images_to_text.bat`
 
