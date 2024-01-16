@@ -71,7 +71,7 @@ Install Tesseract and `pdftopng.exe`.
 #### Language File
 
 - Obtain the language file from `tessdata`. The Myanmar language file should be `mya.traineddata`.
-- Add this language file to the Tesseract-OCR directory on your computer, typically under `C:/Program Files`.
+- Add this language file to the Tesseract-OCR directory on your computer, typically under `C:\Program Files (x86)\Tesseract OCR\tessdata` or `C:\Program Files\Tesseract OCR\tessdata`
 - If you have previously downloaded language files, you might see additional languages. Replace them with this new language file for higher accuracy and more font support.
 
 ### Running the Script
