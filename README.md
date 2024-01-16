@@ -26,12 +26,13 @@ brew install tesseract
 ```
 You need to install language files for tesseract. 
 Type 
-```brew install tesseract-lang
+```
+brew install tesseract-lang
 ```
 
 The original Myanmar language file has poor quality. According to my research, this one has better accuracy. https://github.com/pndaza/tesseract-myanmar
 So, we need to replace the original language file mya.traineddata with new one. As you see, original has less than 10 MB size. Newer version has around 24.1MB.
-The location of langauge files could be in /opt/homebrew/Cellar/tesseract-lang/4.1.0/share/tessdata
+The location of langauge files could be in /opt/homebrew/Cellar/tesseract/5.3.3/share/tessdata
 
 
 Script Permissions
