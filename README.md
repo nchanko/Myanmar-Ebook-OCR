@@ -8,8 +8,7 @@ This repository contains a script utilizing Tesseract OCR to digitize PDF ebooks
 - It can convert PNG images and PDF files into TXT files.
 - Currently supports OCR for English and Myanmar-based text.
 - Files must be placed in the respective folder (Input PDF and input images for OCR).
-- The original script, found on the internet and created by an unknown user, works only for Windows.
-- I modified the script for MAC compatibility and other additional functions like epu converter, zawgyi unicode converter.
+- The original script, found on the internet and created by an unknown user, works only for Windows. I modified the script for MAC compatibility and other additional functions like epu converter, zawgyi unicode converter.
 
 ## Installation for MAC
 
@@ -25,8 +24,15 @@ Install Poppler and Tesseract:
 brew install poppler
 brew install tesseract
 ```
-From Finder
-Move the mya.traineddata to /tesseract-lang/4.1.0/share/tessdata. This Myanmar model file is necessary for OCR.
+You need to install language files for tesseract. 
+Type 
+```brew install tesseract-lang
+```
+
+The original Myanmar language file has poor quality. According to my research, this one has better accuracy. https://github.com/pndaza/tesseract-myanmar
+So, we need to replace the original language file mya.traineddata with new one. As you see, original has less than 10 MB size. Newer version has around 24.1MB.
+The location of langauge files could be in /opt/homebrew/Cellar/tesseract-lang/4.1.0/share/tessdata
+
 
 Script Permissions
 Run this to give permission to the script (only one time):
