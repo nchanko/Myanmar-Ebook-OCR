@@ -26,7 +26,7 @@ brew install poppler
 brew install tesseract
 ```
 From Finder
-Move the mya.traineddata to /opt/homebrew/share/tessdata/. This Myanmar model file is necessary for OCR.
+Move the mya.traineddata to /tesseract-lang/4.1.0/share/tessdata. This Myanmar model file is necessary for OCR.
 
 Script Permissions
 Run this to give permission to the script (only one time):
