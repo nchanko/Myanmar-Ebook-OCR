@@ -13,8 +13,6 @@ This repository contains a script utilizing Tesseract OCR to digitize PDF ebooks
 
 ## Installation for MAC
 
-Install Tesseract and Poppler.
-
 ### In the Terminal
 
 Set directory - for eg:
