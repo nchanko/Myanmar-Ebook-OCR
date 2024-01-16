@@ -1,6 +1,3 @@
-
-markdown
-Copy code
 # Myanmar-Ebook-OCR
 
 This repository contains a script utilizing Tesseract OCR to digitize PDF ebooks into text format.
