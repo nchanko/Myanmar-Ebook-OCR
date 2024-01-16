@@ -17,9 +17,9 @@ Install Tesseract and Poppler.
 
 ### In the Terminal
 
-Set directory:
+Set directory - for eg:
 ```
-cd /Users/arthur/Downloads/Myanmar_OCR
+cd /Users/arthur/Downloads/Myanmar-Ebook-OCR
 ```
 Install Poppler and Tesseract:
 
