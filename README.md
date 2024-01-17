@@ -24,33 +24,60 @@ Install Poppler and Tesseract:
 brew install poppler
 brew install tesseract
 ```
-You need to install language files for tesseract. 
-Type 
+
+For the image cropping
+
 ```
-brew install tesseract-lang
+brew install ImageMagick
 ```
 
 The original Myanmar language file has poor quality. According to my research, this one has better accuracy. https://github.com/pndaza/tesseract-myanmar
 So, we need to replace the original language file mya.traineddata with new one. As you see, original has less than 10 MB size. Newer version has around 24.1MB.
-The location of langauge files could be in   `/opt/homebrew/Cellar/tesseract/5.3.3/share/tessdata`
+
+The location of langauge files could be in   `/opt/homebrew/Cellar/tesseract/5.3.3/share/tessdata/`
 
 
 Script Permissions
 Run this to give permission to the script (only one time):
 
 ```
-
 chmod +x pdf_to_text.sh
 chmod +x images_to_text.sh
 ```
 
 ### Usage
 ### OCR PDF Files
+
 Place PDF file in the input_pdf folder.
 In the terminal, set the directory and run:
+
 ```
 ./pdf_to_text.sh
 ```
+
+
+### OCR with crop image
+
+```
+./pdf_to_text.sh -c 80,80,1145,1430
+```
+
+For the Crop need to use with `-c` parameter. Parameter is `x,y,width,heigh`. In this example,
+
+   - x 80
+   - y 80
+   - width 1145
+   - height 1430
+
+To know the x,y,w,h , recommend to extract the PDF to image with following command.
+
+```
+pdftoppm -gray -f 2 -l 2 input.pdf 'myfile' -png
+```
+
+when you get the myfile.png file, you can open with photoshop or any image editor. After that, you can point the x,y,w,h in that editor.
+
+
 ### OCR Image Files
 Place image files in the input_images folder.
 In the terminal, set the directory and run:

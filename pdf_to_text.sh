@@ -14,11 +14,28 @@ cleanup_and_exit() {
     exit 1
 }
 
+
 # Trap Ctrl+C (SIGINT) and call cleanup_and_exit()
 trap cleanup_and_exit SIGINT
 
 # Directory with your PDFs
 pdf_directory="input_pdf"
+
+x=""
+while getopts "c:" opt; do
+  case ${opt} in
+    c)
+      IFS=',' read -ra ADDR <<< "${OPTARG}"
+      x=${ADDR[0]}
+      y=${ADDR[1]}
+      width=${ADDR[2]}
+      height=${ADDR[3]}
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      ;;
+  esac
+done
 
 # Change to the directory with your PDFs
 cd "$pdf_directory" || exit
@@ -40,7 +57,10 @@ for pdf_file in *.pdf; do
     # OCR the PNG files and append the file name
     for png_file in "${pdf_file%.pdf}"*.png; do
         echo "Performing OCR on $png_file..."
-        tesseract "$png_file" stdout -l mya --psm 6 --dpi 100 >> "$all_text_file"
+        if [[ -n "$x" ]]; then
+            convert "$png_file" -crop "${width}x${height}+${x}+${y}" "$png_file"
+        fi
+        tesseract "$png_file" stdout -l mya --psm 6 --dpi 300 >> "$all_text_file"
     done
 
     echo "Cleaning up PNG files for $pdf_file..."
