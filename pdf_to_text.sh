@@ -37,8 +37,6 @@ while getopts "c:" opt; do
   esac
 done
 
-echo "$x"
-
 # Change to the directory with your PDFs
 cd "$pdf_directory" || exit
 
