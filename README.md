@@ -8,7 +8,7 @@ This repository contains a script utilizing Tesseract OCR to digitize PDF ebooks
 - It can convert PNG images and PDF files into TXT files.
 - Currently supports OCR for English and Myanmar-based text.
 - Files must be placed in the respective folder (Input PDF and input images for OCR).
-- The original script, found on the internet and created by an unknown user, works only for Windows. I modified the script for MAC compatibility and other additional functions like epu converter, zawgyi unicode converter.
+- The original script, found on the internet and created by an unknown user, works for Windows. (Kudos to original author). I modified the script for MAC compatibility and other additional functions like epu converter, zawgyi unicode converter.
 
 ## Installation for MAC
 
