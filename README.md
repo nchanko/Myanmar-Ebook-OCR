@@ -10,7 +10,7 @@ This repository contains a script utilizing Tesseract OCR to digitize PDF ebooks
 - Files must be placed in the respective folder (Input PDF and input images for OCR).
 - The original script, found on the internet and created by an unknown user, works for Windows. (Kudos to original author). I modified the script for MAC compatibility and other additional functions like epu converter, zawgyi unicode converter.
 
-## FOR WINDOW USER: First Download [Tesseract-OCR] ( https://drive.google.com/file/d/1WHKjXXdljtIq3EU6CtXWNCtUVfbR8444/view?usp=sharing) from this link.
+## FOR WINDOW USER: First Download [Tesseract-OCR] (https://drive.google.com/file/d/1WHKjXXdljtIq3EU6CtXWNCtUVfbR8444/view?usp=sharing) from this link.
  Unzip Tesseract-OCR.zip file. Otherwise, you will encounter error.
 
 ## Installation for MAC
