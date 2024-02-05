@@ -10,8 +10,33 @@ This repository contains a script utilizing Tesseract OCR to digitize PDF ebooks
 - Files must be placed in the respective folder (Input PDF and input images for OCR).
 - The original script, found on the internet and created by an unknown user, works for Windows. (Kudos to original author). I modified the script for MAC compatibility and other additional functions like epu converter, zawgyi unicode converter.
 
-## FOR WINDOW USER: First Download [Tesseract-OCR] (https://drive.google.com/file/d/1WHKjXXdljtIq3EU6CtXWNCtUVfbR8444/view?usp=sharing) from this link.
- Unzip Tesseract-OCR.zip file. Otherwise, you will encounter error.
+## FOR WINDOW USER: First Download [Tesseract-OCR](https://drive.google.com/file/d/1WHKjXXdljtIq3EU6CtXWNCtUVfbR8444/view?usp=sharing) from this link. Unzip Tesseract-OCR.zip file. Otherwise, you will encounter error.
+
+## For Windows
+
+### Installation
+
+
+
+For window, 64 version, the standalone OCR software is already in this project folder, Tesseract-OCR .
+- `pdftopng` is already included in the Tesseract-OCR folder. You can find it here: [Tesseract-OCR/pdf_tools](https://github.com/NChanko/Myanmar-Ebook-OCR/tree/main/Tesseract-OCR/pdf_tools).
+
+
+#### Language File
+
+- Obtain the language file from `tessdata`. The Myanmar language file should be `mya.traineddata`.
+- If you have better Myanmar language file, replace the mya.traineddata located in Myanmar-Ebook-OCR/Tesseract-OCR/tessdata. 
+- If you want to add additional language files,place them in tessdata.
+
+### Running the Script
+
+Once the setup is complete:
+
+1. Open the terminal or command line in your work directory (Myanmar-Ebook-OCR).
+2. Run the following commands as needed:
+   - For PDFs: `./pdf_to_text.bat`
+   - For images: `./images_to_text.bat`
+
 
 ## Installation for MAC
 
@@ -85,34 +110,6 @@ In the terminal, set the directory and run:
 ```
 ./images_to_text.sh
 ```
-
-
-## For Windows
-
-### Installation
-
-
-
-For window, 64 version, the standalone OCR software is already in this project folder, Tesseract-OCR .
-- `pdftopng` is already included in the Tesseract-OCR folder. You can find it here: [Tesseract-OCR/pdf_tools](https://github.com/NChanko/Myanmar-Ebook-OCR/tree/main/Tesseract-OCR/pdf_tools).
-
-
-#### Language File
-
-- Obtain the language file from `tessdata`. The Myanmar language file should be `mya.traineddata`.
-- If you have better Myanmar language file, replace the mya.traineddata located in Myanmar-Ebook-OCR/Tesseract-OCR/tessdata. 
-- If you want to add additional language files,place them in tessdata.
-
-### Running the Script
-
-Once the setup is complete:
-
-1. Open the terminal or command line in your work directory (Myanmar-Ebook-OCR).
-2. Run the following commands as needed:
-   - For PDFs: `./pdf_to_text.bat`
-   - For images: `./images_to_text.bat`
-
-
 
 ADDITIONAL TIP: If your book contains both English and Burmese and you wanna recognize English words, you need to adjust the script file alittle bit. 1. You need to have english languge file in your tessdata. 2. You need to find the word called mya in the script and change to mya+eng. For additional language, you can add with + and language code.
 
