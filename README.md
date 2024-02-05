@@ -10,6 +10,9 @@ This repository contains a script utilizing Tesseract OCR to digitize PDF ebooks
 - Files must be placed in the respective folder (Input PDF and input images for OCR).
 - The original script, found on the internet and created by an unknown user, works for Windows. (Kudos to original author). I modified the script for MAC compatibility and other additional functions like epu converter, zawgyi unicode converter.
 
+## FOR WINDOW USER: First Download [Tesseract-OCR] ( https://drive.google.com/file/d/1WHKjXXdljtIq3EU6CtXWNCtUVfbR8444/view?usp=sharing) from this link.
+ Unzip Tesseract-OCR.zip file. Otherwise, you will encounter error.
+
 ## Installation for MAC
 
 ### In the Terminal
@@ -32,9 +35,7 @@ brew install ImageMagick
 ```
 
 The original Myanmar language file has poor quality. According to my research, this one has better accuracy. https://github.com/pndaza/tesseract-myanmar
-So, we need to replace the original language file mya.traineddata with new one. As you see, original has less than 10 MB size. Newer version has around 24.1MB.
-
-The location of langauge files could be in   `/opt/homebrew/Cellar/tesseract/5.3.3/share/tessdata/`
+You can replace the original language file mya.traineddata with new one.The file is located in Tesseract-OCR/tessdata .
 
 
 Script Permissions
@@ -90,16 +91,17 @@ In the terminal, set the directory and run:
 
 ### Installation
 
-Install Tesseract and `pdftopng.exe`.
 
+
+For window, 64 version, the standalone OCR software is already in this project folder, Tesseract-OCR .
 - `pdftopng` is already included in the Tesseract-OCR folder. You can find it here: [Tesseract-OCR/pdf_tools](https://github.com/NChanko/Myanmar-Ebook-OCR/tree/main/Tesseract-OCR/pdf_tools).
-- Place the `pdf_tools` folder in your Tesseract-OCR directory on your computer.
+
 
 #### Language File
 
 - Obtain the language file from `tessdata`. The Myanmar language file should be `mya.traineddata`.
-- Add this language file to the Tesseract-OCR directory on your computer, typically under `C:\Program Files (x86)\Tesseract OCR\tessdata` or `C:\Program Files\Tesseract OCR\tessdata`
-- If you have previously downloaded language files, you might see additional languages. Replace them with this new language file for higher accuracy and more font support.
+- If you have better Myanmar language file, replace the mya.traineddata located in Myanmar-Ebook-OCR/Tesseract-OCR/tessdata. 
+- If you want to add additional language files,place them in tessdata.
 
 ### Running the Script
 
