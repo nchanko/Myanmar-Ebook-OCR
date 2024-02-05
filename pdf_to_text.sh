@@ -1,5 +1,16 @@
 #!/bin/bash
 
+
+# Get the directory of the current script
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+# Set the TESSDATA_PREFIX to the tessdata directory within your project
+export TESSDATA_PREFIX="$SCRIPT_DIR/Tesseract-OCR/tessdata"
+
+# Now, the rest of your script can rely on TESSDATA_PREFIX being correctly set
+# and Tesseract will look for the tessdata directory accordingly
+
+
 # Function to handle script interruption
 cleanup_and_exit() {
     echo "Script interrupted. Cleaning up..."
