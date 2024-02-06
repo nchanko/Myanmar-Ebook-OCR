@@ -146,18 +146,18 @@ Window 64 version များအတွက် tesseract software file ကို 
 ## Mac အတွက် Install ပြုလုပ်ခြင်း
 ### Terminal ထဲတွင်
 1. ပထမဆုံး Directory ကိုသတ်မှတ်ပါ။ cd ဟုရိုက်၍ Myanmar-Ebook-OCR ပါသည့် ဖိုဒါကို Drag ဆွဲထည့်လိုက်ရင်လည်းဖြစ်ပါသည်။ နမူနာအားဖြင့် ဤသို့ဖြစ်နိုင်သည်။
-   ```
-   cd /Users/arthur/Downloads/Myanmar-Ebook-OCR
-   ```
+```
+cd /Users/arthur/Downloads/Myanmar-Ebook-OCR
+```
 2. Poppler နှင့် Tesseract ကို Install မလုပ်ရသေးလျင် Brew မှတဆင့် Install လုပ်ပါ။ စက်ထဲတွင် Homebrew ရှိထားရန်လိုသည်။
-   ```
-   brew install poppler
-   brew install tesseract
-   ```
+```
+brew install poppler
+brew install tesseract
+```
 3.Image cropping လုပ်လိုလျင် Imagemagick ကိုသွင်းရန်လိုသည်။
-   ```
-   brew install ImageMagick
-   ```
+```
+brew install ImageMagick
+```
 မူရင်းမြန်မာဘာသာစကားဖိုင်သည် အရည်အသွေးညံ့ဖျင်းသည်။ လက်ရှိတွင် ဤ ဖိုင်သည် quality အကောင်းဆုံးဖြစ်သည်။ https://github.com/pndaza/tesseract-myanmar
 ပိုကောင်းသည့် မော်ဒယ်ရှိပါက မူရင်းဘာသာစကားဖိုင် mya.traineddata ကို အသစ်တစ်ခုဖြင့် အစားထိုးနိုင်ပါသည်။ အဆိုပါဖိုင်သည် Tesseract-OCR/tessdata တွင် ရှိသည်။
 
