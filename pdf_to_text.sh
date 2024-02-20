@@ -58,26 +58,36 @@ for pdf_file in *.pdf; do
     echo "Converting $pdf_file to grayscale PNG..."
     pdftoppm -gray "$pdf_file" "${pdf_file%.pdf}" -png
 
+    book_name="${pdf_file%.pdf}"
+
     # Create an individual _all.txt file for each PDF
-    all_text_file="${pdf_file%.pdf}_all.txt"
+    all_text_file="${book_name}_all.txt"
     echo "Initializing OCR results file: $all_text_file"
 
     # Initialize _all.txt file
-    echo "Results for file: $pdf_file" > "$all_text_file"
+    echo "Results for file: $book_name" > "$all_text_file"
+
+    page_number=1
 
     # OCR the PNG files and append the file name
-    for png_file in "${pdf_file%.pdf}"*.png; do
+    for png_file in "${book_name}"*.png; do
         echo "Performing OCR on $png_file..."
         if [[ -n "$x" ]]; then
             convert "$png_file" -crop "${width}x${height}+${x}+${y}" "$png_file"
         fi
-        tesseract "$png_file" stdout -l mya --psm 6 --dpi 300 >> "$all_text_file"
+        # Append book name and page number before OCR content
+        echo "Book: $book_name, Page $page_number:" >> "$all_text_file"
+        tesseract "$png_file" stdout -l eng+mya --psm 6 --dpi 300 >> "$all_text_file"
+        
+        # Increment page number for next iteration
+        ((page_number++))
+
     done
 
-    echo "Cleaning up PNG files for $pdf_file..."
-    rm "${pdf_file%.pdf}"*.png
+    echo "Cleaning up PNG files for $book_name..."
+    rm "${book_name}"*.png
 
-    echo "$pdf_file processing complete."
+    echo "$book_name processing complete."
 done
 
 echo "All PDF files processed."
